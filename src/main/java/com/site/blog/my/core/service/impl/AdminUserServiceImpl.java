@@ -1,7 +1,7 @@
 package com.site.blog.my.core.service.impl;
 
-import com.site.blog.my.core.dao.AdminUserMapper;
 import com.site.blog.my.core.entity.AdminUser;
+import com.site.blog.my.core.repository.AdminUserRepository;
 import com.site.blog.my.core.service.AdminUserService;
 import com.site.blog.my.core.util.MD5Util;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,7 @@ import javax.annotation.Resource;
 public class AdminUserServiceImpl implements AdminUserService {
 
     @Resource
-    private AdminUserMapper adminUserMapper;
+    private AdminUserRepository adminUserMapper;
 
     @Override
     public AdminUser login(String userName, String password) {

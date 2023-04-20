@@ -1,8 +1,8 @@
 package com.site.blog.my.core.service.impl;
 
-import com.site.blog.my.core.dao.BlogCategoryMapper;
-import com.site.blog.my.core.dao.BlogMapper;
 import com.site.blog.my.core.entity.BlogCategory;
+import com.site.blog.my.core.repository.BlogCategoryRepository;
+import com.site.blog.my.core.repository.BlogRepository;
 import com.site.blog.my.core.service.CategoryService;
 import com.site.blog.my.core.util.PageQueryUtil;
 import com.site.blog.my.core.util.PageResult;
@@ -16,9 +16,9 @@ import java.util.List;
 public class CategoryServiceImpl implements CategoryService {
 
     @Autowired
-    private BlogCategoryMapper blogCategoryMapper;
+    private BlogCategoryRepository blogCategoryMapper;
     @Autowired
-    private BlogMapper blogMapper;
+    private BlogRepository blogMapper;
 
     @Override
     public PageResult getBlogCategoryPage(PageQueryUtil pageUtil) {

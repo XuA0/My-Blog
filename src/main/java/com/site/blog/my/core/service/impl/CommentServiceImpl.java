@@ -1,7 +1,7 @@
 package com.site.blog.my.core.service.impl;
 
-import com.site.blog.my.core.dao.BlogCommentMapper;
 import com.site.blog.my.core.entity.BlogComment;
+import com.site.blog.my.core.repository.BlogCommentRepository;
 import com.site.blog.my.core.service.CommentService;
 import com.site.blog.my.core.util.PageQueryUtil;
 import com.site.blog.my.core.util.PageResult;
@@ -17,7 +17,7 @@ import java.util.Map;
 @Service
 public class CommentServiceImpl implements CommentService {
     @Autowired
-    private BlogCommentMapper blogCommentMapper;
+    private BlogCommentRepository blogCommentMapper;
 
     @Override
     public Boolean addComment(BlogComment blogComment) {

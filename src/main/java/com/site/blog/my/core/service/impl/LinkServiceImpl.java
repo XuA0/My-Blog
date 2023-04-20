@@ -1,7 +1,7 @@
 package com.site.blog.my.core.service.impl;
 
-import com.site.blog.my.core.dao.BlogLinkMapper;
 import com.site.blog.my.core.entity.BlogLink;
+import com.site.blog.my.core.repository.BlogLinkRepository;
 import com.site.blog.my.core.service.LinkService;
 import com.site.blog.my.core.util.PageQueryUtil;
 import com.site.blog.my.core.util.PageResult;
@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 public class LinkServiceImpl implements LinkService {
 
     @Autowired
-    private BlogLinkMapper blogLinkMapper;
+    private BlogLinkRepository blogLinkMapper;
 
     @Override
     public PageResult getBlogLinkPage(PageQueryUtil pageUtil) {

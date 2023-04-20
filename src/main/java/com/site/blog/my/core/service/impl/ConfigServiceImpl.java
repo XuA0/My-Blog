@@ -1,7 +1,7 @@
 package com.site.blog.my.core.service.impl;
 
-import com.site.blog.my.core.dao.BlogConfigMapper;
 import com.site.blog.my.core.entity.BlogConfig;
+import com.site.blog.my.core.repository.BlogConfigRepository;
 import com.site.blog.my.core.service.ConfigService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 @Service
 public class ConfigServiceImpl implements ConfigService {
     @Autowired
-    private BlogConfigMapper configMapper;
+    private BlogConfigRepository configMapper;
 
     public static final String websiteName = "personal blog";
     public static final String websiteDescription = "personal blog是SpringBoot2+Thymeleaf+Mybatis建造的个人博客网站.SpringBoot实战博客源码.个人博客搭建";
